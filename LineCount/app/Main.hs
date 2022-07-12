@@ -11,7 +11,6 @@ import Data.List
 import ArgUtilities (fromArgumentsToIgnoreFilter, listToArgument)
 
 
-
 test = [".hs", "--ignore", "debug"]
 
 main :: IO ()
@@ -23,7 +22,7 @@ main = do
     let ext = fromArgumentsToExt argADT
     forM_ ext (printLines cwd fil)
     where
-        printLines cwd fil ext = eval cwd fil ext >>= \x -> putStrLn (ext <> " Files is: " <> show x <> " lines")
+        printLines cwd fil ext = eval cwd fil ext >>= \x -> putStrLn (ext <> " Files are: " <> show x <> " lines")
 
 eval path fil ext = do
     files <- predicateFind (\p -> takeExtension p == ext) path fil
