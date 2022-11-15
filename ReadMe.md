@@ -1,1 +1,1 @@
-# A collection of small utilities programs for various purposes
+# A collection of small utility programs for various purposes
